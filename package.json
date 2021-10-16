@@ -4,8 +4,24 @@
   "description": "final project with piu for credit ",
   "main": "index.js",
   "scripts": {
-    "test": "npm start"
+    "test": "npm start",
+    "build:scss": "node-sass --output-style compressed -o dist/css src/css",
+    "watch:css": "onchange \"src/css/main.scss\" -- npm run build:scss",
+    "watch:js":"onchange -v \"src/js/*.js\" -- npm run lint:js",
+    "lint:js": "eslint --fix src/js/*.js",
+    "start": "browser-sync start --server --files './index.html, dist/**/*, src/**/*'",
+    "watch:all": "npm-run-all --parallel watch:css start watch:js"
+
   },
   "author": "Krzysztof Drzewiecki III_inf_nw5",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.2",
+    "node-sass": "^6.0.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0"
+  }
 }
