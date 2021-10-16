@@ -1,0 +1,11 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "final project with piu for credit ",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "author": "Krzysztof Drzewiecki III_inf_nw5",
+  "license": "ISC"
+}
