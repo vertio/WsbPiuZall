@@ -11,7 +11,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="/index.html">WSBProjektowanieInterfejsówUżytkownikaZaliczenie</a>
+          <a class="navbar-brand" href="../../index.html">WSBProjektowanieInterfejsówUżytkownikaZaliczenie</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -23,6 +23,9 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="kantor.php">Kantor Walut</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="login.php">Zaloguj</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -30,18 +33,18 @@
 
       <!-- skrypt conenct to db -->
       <?php //skrypt1 
-		$con = mysqli_connect('localhost','root');
-		$db = mysqli_select_db($con,'[nazwa_bazy]');
-		//var_export($db);
-		$que = "SELECT informacja, wart_min, wart_max from [nazwa_bazy];";
-		$ans = mysqli_query($con,$que);
-		//var_dump($ans);
-		// while($row = mysqli_fetch_row($ans)){
-		// 	echo "<tr>";
-		// 	echo "<td>".$row['0']."</td>"."<td>".$row['1']."</td><td>".$row['2']."</td></tr>";
-		// }
+        $con = mysqli_connect('localhost','root');
+        $db = mysqli_select_db($con,'[nazwa_bazy]');
+        //var_export($db);
+        $que = "SELECT informacja, wart_min, wart_max from [nazwa_bazy];";
+        $ans = mysqli_query($con,$que);
+        //var_dump($ans);
+        // while($row = mysqli_fetch_row($ans)){
+        // 	echo "<tr>";
+        // 	echo "<td>".$row['0']."</td>"."<td>".$row['1']."</td><td>".$row['2']."</td></tr>";
+        // }
 		
-		?>
+		  ?>
       <!-- Formularz BMI -->
 <form action="" method="POST">
   <div class="row mb-3">
@@ -59,7 +62,7 @@
   </div>
 
   <div class="row mb-3">
-      <input type="submit" value="oblicz">
+      <input class="button" type="submit" value="oblicz">
   </div>
 </form>
     <?php

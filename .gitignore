@@ -25,3 +25,6 @@
 /vendors/*
 node_modules
 test.css
+.vscode
+settings.json
+.vscode/settings.json
