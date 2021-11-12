@@ -49,8 +49,8 @@
             $url = 'http://api.nbp.pl/api/exchangerates/rates/A/USD';
             $xml = file_get_contents($url, false, $context);
             $xml = simplexml_load_string($xml);
-
-            print_r($xml);
+            echo $xml->Currency . "<br>";
+            echo $xml->Rates->Rate->Mid . "<br>";
           ?>
         </div>
       </div>
@@ -62,8 +62,8 @@
             $url = 'http://api.nbp.pl/api/exchangerates/rates/A/EUR';
             $xml = file_get_contents($url, false, $context);
             $xml = simplexml_load_string($xml);
-
-            print_r($xml);
+            echo $xml->Currency . "<br>";
+            echo $xml->Rates->Rate->Mid . "<br>";
           ?>
       </div>
       </div>
@@ -75,8 +75,8 @@
             $url = 'http://api.nbp.pl/api/exchangerates/rates/A/CHF';
             $xml = file_get_contents($url, false, $context);
             $xml = simplexml_load_string($xml);
-
-            print_r($xml);
+            echo $xml->Currency . "<br>";
+            echo $xml->Rates->Rate->Mid . "<br>";
           ?>
       </div>
       </div>
@@ -88,8 +88,8 @@
             $url = 'http://api.nbp.pl/api/exchangerates/rates/A/THB';
             $xml = file_get_contents($url, false, $context);
             $xml = simplexml_load_string($xml);
-
-            print_r($xml);
+            echo $xml->Currency . "<br>";
+            echo $xml->Rates->Rate->Mid . "<br>";
           ?>
       </div>
       </div>

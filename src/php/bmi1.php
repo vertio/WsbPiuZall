@@ -44,10 +44,50 @@
         // 	echo "<td>".$row['0']."</td>"."<td>".$row['1']."</td><td>".$row['2']."</td></tr>";
         // }
 		
-		  ?>
+?>
       <!-- Formularz BMI -->
-<form action="" method="POST">
-  <div class="row mb-3">
+
+<div class="wrapper">
+  <form action="" method="POST">
+  <div class="header">
+    <h1 class="h-title">Kalkulator bmi</h1>
+  </div>
+    <div class="WeightForm">
+      <label for="inputWeight" class="Weight-form-label"><strong>Waga</strong></label>
+      <input type="number" name="waga" class="Weight-form-control" id="inputWeight" placeholder="podaj swoją wagę">
+    </div>
+
+    <div class="HeightFrom">
+      <label for="inputHeight" class="Height-form-label"><strong>Wzrost</strong></label>
+      <input type="number" name="wzrost" class="Height-form-control" id="inputHeight" placeholder="podaj swój wzrost">
+    </div>
+
+    <div class="ButtonControl">
+    <input class="button" type="submit" value="oblicz">
+    </div>
+
+    <div class="BMI">
+    <?php
+    if(isset($_POST['waga'])&&(isset($_POST['wzrost']))){
+		$w = $_POST['waga'];
+		$wz = $_POST['wzrost'];
+		$bmi = ($w*10000)/($wz*$wz);
+		$data = date("Y-m-d");
+		Echo "Twoja waga: ".$w;
+		echo " Twój wzrost: ".$wz;
+		echo "<br> BMI wynosi: ".$bmi;
+			if ($bmi >= 31){
+				$que = "INSERT INTO wynik (bmi_id,data_pomiaru,wynik) Values('3','$data','27');" ;
+			}
+		}
+		mysqli_close($con);
+		?>
+    </div>
+  </form>
+</div>
+
+<!-- <form action="" method="POST">
+  <div class="row mb-3 ">
     <label for="weight" class="col-sm-2 col-form-label">Waga</label>
     <div class="col-sm-10">
       <input type="number" name="waga" class="form-control" id="inputEmail3" placeholder="Podaj swoją wagę">
@@ -63,25 +103,8 @@
 
   <div class="row mb-3">
       <input class="button" type="submit" value="oblicz">
-  </div>
-</form>
-    <?php
-    if(isset($_POST['waga'])&&(isset($_POST['wzrost']))){
-		$w = $_POST['waga'];
-		$wz = $_POST['wzrost'];
-		$bmi = ($w*10000)/($wz*$wz);
-		$data = date("Y-m-d");
-		Echo "Twoja waga: ".$w;
-		echo " Twój wzrost: ".$wz;
-		echo "<br> BMI wynosi: ".$bmi;
-			if ($bmi >= 31){
-				$que = "INSERT INTO wynik (bmi_id,data_pomiaru,wynik) Values('3','$data','27');" ;
-			}
-		
-		
-		}
-		mysqli_close($con);
-		?>
+  </div> -->
+<!-- </form> -->
       <footer>
           <div class="ending">
               <p>Krzysztof Drzewiecki 114939 grIII_inf_nw_5 </p>

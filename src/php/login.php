@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../src/assets/lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../../dist/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../src/assets/lib/bootstrap/css/bootstrap.min.css">
     <title>WsbPiuZal-Logowanie</title>
 </head>
 <body>
@@ -17,7 +17,7 @@
                 </div>
                 <div class="card-body">
                     <div class="email-body mb-3">
-                        <label for="EmailInput" class="from-label">email adress</label>
+                        <label for="EmailInput" class="from-label">e-mail</label>
                         <input type="email" class="from-control" placeholder="Email">
                     </div>
                     <div class="pass-body mb-3">
@@ -28,9 +28,11 @@
                         <input type="checkbox" class="from-check" id="check">
                         <label for="check" class="from-check">Zapamiętaj mnie</label>
                     </div>
+                    <div class="submit-button mb-3">
+                    <button type="submit" class="btn btn-primary">Zaloguj</button>
+                    </div>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Zaloguj</button>
         </form>
         <!-- <div class="card-login">
             <div class="card-head">

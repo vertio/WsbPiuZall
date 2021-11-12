@@ -28,3 +28,8 @@ test.css
 .vscode
 settings.json
 .vscode/settings.json
+src/php/.connect_to_db.php
+src/php/connect_to_db.php
+src/sql/test.sql
+.vscode/settings.json
+.vscode/settings.json
