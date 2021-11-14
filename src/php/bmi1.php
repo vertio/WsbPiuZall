@@ -53,13 +53,17 @@
     <h1 class="h-title">Kalkulator bmi</h1>
   </div>
     <div class="WeightForm">
-      <label for="inputWeight" class="Weight-form-label"><strong>Waga</strong></label>
+      <label for="inputWeight" class="Weight-form-label">Waga</label>
+      <div class="WeightFormControl">
       <input type="number" name="waga" class="Weight-form-control" id="inputWeight" placeholder="podaj swoją wagę">
+      </div>
     </div>
 
     <div class="HeightFrom">
-      <label for="inputHeight" class="Height-form-label"><strong>Wzrost</strong></label>
-      <input type="number" name="wzrost" class="Height-form-control" id="inputHeight" placeholder="podaj swój wzrost">
+      <label for="inputHeight" class="Height-form-label">Wzrost</label>
+      <div class="HeightFromControl">
+      <input type="number" name="wzrost" class="Height-form-control" id="inputheight" placeholder="podaj swoją wzrost">
+      </div>
     </div>
 
     <div class="ButtonControl">

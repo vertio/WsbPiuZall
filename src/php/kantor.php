@@ -32,7 +32,52 @@
         </div>
       </nav>
 
-      <div class="header">
+      <div class="currency_exchange">
+        <form action="" method="POST">
+        <div class="header">
+          <h1 class="title">Kantor Walut</h1>
+        </div>
+        <div class="currency_body">
+          <h4 class="">Podaj kwotę</h4>
+          <input type="number" value="1">
+        </div>
+        <div class="exchange_select">
+          <div class="exchange_select_from">
+            <h4 class="">from</h4>
+            <div class="exchenge_select_country">
+            <img src="" alt="country_flags">
+            <select>
+              <option value="USD">USD</option>
+              <option value="USD">EUR</option>
+              <option value="USD">PLN</option>
+              <option value="USD">USD</option>
+            </select>
+          </div>
+          </div>
+          <div class="exchange_select_line"></div>
+          <div class="exchange_select_to">
+            <h4 class="">To</h4>
+            <div class="exchenge_select_country">
+            <img src="" alt="country_flags">
+            <select>
+              <option value="USD">USD</option>
+              <option value="USD">EUR</option>
+              <option value="USD">PLN</option>
+              <option value="USD">USD</option>
+            </select>
+          </div>
+          </div>
+        </div>
+        <div class="exchange_rate">
+          1zł = 0,00000001 $
+        </div>
+        <div class="exchange_convert">
+            <input type="button" value="przelicz">
+          </div>
+        </form>
+      </div>
+
+      <!-- <div class="header">
       <h2>Podaj kwotę w PLN i wybierz walutę</h2>
 	    <form method="GET" action="convert.php">
         <input type="text" name="from" placeholder="From" /> <br />
@@ -40,7 +85,7 @@
         <input type="number" name="amount" min="1" placeholder="Amount" /> <br />
         <input type="submit" value="Convert" /> <br />
       </form>
-      </div>
+      </div> -->
 
       <div class="CurrencyCard1">
         <div class="cardbody">

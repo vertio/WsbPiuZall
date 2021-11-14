@@ -35,7 +35,7 @@ footer{
     height: 370px;
     background: white;
     border: 1px solid black;
-    border-radius: 2px;
+    border-radius: 10px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -45,19 +45,63 @@ footer{
     margin: 30px 20px 30px 20px;
     text-align: center;
 }
+.WeightForm, .HeightFrom, .ButtonControl{
+    text-align: center;
+}
+.Weight-form-label, .Height-form-label{
+    text-align: left;
+    margin-right: 140px;
+}
+.Height-form-label{
+    margin-right: 135px;
+}
+
 form .WeightForm input, .HeightFrom input{
     width: 200px;
     outline: none;
     font-size: 15px;
     margin-left: 20px;
 }
+.Weight-form-control, .Height-form-control{
+    outline: none;
+    border: none;
+    background: none;
+    border-bottom: 1px solid black;
+}
 form .ButtonControl input{
     font-size: 18px;
-    background: white;
+    background:lightskyblue;
     border: 1px solid black ;
     padding: 8px 15px;
     margin-bottom: 20px;
     margin-top: 20px;
-
 }
-
+.button{
+    border-radius: 10px;
+    width: 130px;
+}
+.currency_exchange{
+    height: auto;
+    width: 500px;
+    border: 5px solid black;
+}
+.currency_body, .header, .title, .exchange_convert, .exchange_rate{
+    text-align: center;
+    h4{
+        font-size: 15px;
+    }
+}
+.exchange_select{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.exchange_select_from,.exchange_select_to{
+    margin: 30px 10px 20px 30px;
+    width: 100%;
+}
+.exchange_select_line{
+    border: 1px solid grey;
+    border-radius: 3px;
+    width: 0;
+}
