@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../src/assets/lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../../dist/css/main.css">
-    <link rel="stylesheet" type="text/css" href="../../dist/css/test.css">
     <title>kantor Walut</title>
 </head>
 <body>
@@ -76,17 +75,7 @@
           </div>
         </form>
       </div>
-
-      <!-- <div class="header">
-      <h2>Podaj kwotę w PLN i wybierz walutę</h2>
-	    <form method="GET" action="convert.php">
-        <input type="text" name="from" placeholder="From" /> <br />
-        <input type="text" name="to" placeholder="To" /> <br />
-        <input type="number" name="amount" min="1" placeholder="Amount" /> <br />
-        <input type="submit" value="Convert" /> <br />
-      </form>
-      </div> -->
-
+    <div class="currency_rate">
       <div class="CurrencyCard1">
         <div class="cardbody">
           <?php
@@ -94,12 +83,11 @@
             $url = 'http://api.nbp.pl/api/exchangerates/rates/A/USD';
             $xml = file_get_contents($url, false, $context);
             $xml = simplexml_load_string($xml);
-            echo $xml->Currency . "<br>";
-            echo $xml->Rates->Rate->Mid . "<br>";
+            echo  '<div class="header_currency"><h4>' . $xml->Currency . '</h4></div>';
+            echo '<div class="body_currency"><p>' . $xml->Rates->Rate->Mid . ' $ </p></div>';
           ?>
         </div>
       </div>
-
       <div class="CurrencyCard2">
       <div class="cardbody">
       <?php
@@ -107,12 +95,11 @@
             $url = 'http://api.nbp.pl/api/exchangerates/rates/A/EUR';
             $xml = file_get_contents($url, false, $context);
             $xml = simplexml_load_string($xml);
-            echo $xml->Currency . "<br>";
-            echo $xml->Rates->Rate->Mid . "<br>";
+            echo  '<div class="header_currency"><h4>' . $xml->Currency .  '</h4></div>';
+            echo '<div class="body_currency"><p>' . $xml->Rates->Rate->Mid . ' € </p></div>';
           ?>
       </div>
       </div>
-      
       <div class="CurrencyCard3">
       <div class="cardbody">
       <?php
@@ -120,8 +107,8 @@
             $url = 'http://api.nbp.pl/api/exchangerates/rates/A/CHF';
             $xml = file_get_contents($url, false, $context);
             $xml = simplexml_load_string($xml);
-            echo $xml->Currency . "<br>";
-            echo $xml->Rates->Rate->Mid . "<br>";
+            echo  '<div class="header_currency"><h4>' . $xml->Currency . '</h4></div>';
+            echo '<div class="body_currency"><p>' . $xml->Rates->Rate->Mid . ' CHF </p></div>';
           ?>
       </div>
       </div>
@@ -133,12 +120,12 @@
             $url = 'http://api.nbp.pl/api/exchangerates/rates/A/THB';
             $xml = file_get_contents($url, false, $context);
             $xml = simplexml_load_string($xml);
-            echo $xml->Currency . "<br>";
-            echo $xml->Rates->Rate->Mid . "<br>";
+            echo  '<div class="header_currency"><h4>' . $xml->Currency . '</h4></div>';
+            echo '<div class="body_currency"><p>' . $xml->Rates->Rate->Mid . ' Bat</p></div>';
           ?>
       </div>
       </div>
-
+    </div>
       <footer>
           <div class="ending">
               <p>Krzysztof Drzewiecki 114939 grIII_inf_nw_5 </p>

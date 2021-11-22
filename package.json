@@ -4,7 +4,6 @@
   "description": "final project with piu for credit ",
   "main": "index.js",
   "scripts": {
-    "test": "npm start",
     "build:scss": "node-sass --output-style compressed -o dist/css src/css",
     "watch:css": "onchange \"src/css/main.scss\" -- npm run build:scss",
     "watch:js":"onchange -v \"src/js/*.js\" -- npm run lint:js",
