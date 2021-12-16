@@ -1,6 +1,6 @@
-// eslint-disable-next-line no-unused-vars
-function JSON_DERULO (params) {
-
+const country = document.querySelectorAll(".exchange_select select");
+for (let i = 0; i < country.length; i++){
+    for(cur_code in country){
+        console.log(cur_code)
+    }
 }
-
-return 0;

@@ -38,18 +38,18 @@
         </div>
         <div class="currency_body">
           <h4 class="">Podaj kwotę</h4>
-          <input type="number" value="1">
+          <input type="number" name="id_value" value="1">
         </div>
         <div class="exchange_select">
           <div class="exchange_select_from">
             <h4 class="">from</h4>
             <div class="exchenge_select_country">
             <img src="" alt="country_flags">
-            <select>
+            <select class="ex_from" name="from">
               <option value="USD">USD</option>
-              <option value="USD">EUR</option>
-              <option value="USD">PLN</option>
-              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="CHF">CHF</option>
+              <option value="BAT">BAT</option>
             </select>
           </div>
           </div>
@@ -58,11 +58,11 @@
             <h4 class="">To</h4>
             <div class="exchenge_select_country">
             <img src="" alt="country_flags">
-            <select>
+            <select class="ex_to" name="to">
               <option value="USD">USD</option>
-              <option value="USD">EUR</option>
-              <option value="USD">PLN</option>
-              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="CHF">CHF</option>
+              <option value="BAT">BAT</option>
             </select>
           </div>
           </div>
