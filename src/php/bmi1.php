@@ -32,7 +32,7 @@
       </nav>
       <!-- skrypt1: podłączenia do bazy danych -->
       <?php //skrypt1 
-        $con = mysqli_connect('localhost','root','Fad3f535');
+        $con = mysqli_connect('localhost','root',);
         $db = mysqli_select_db($con,'wsbpiuzal');
 ?>
       <!-- Formularz BMI -->
