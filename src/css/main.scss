@@ -103,8 +103,16 @@ form .ButtonControl input{
 }
 .exchange_select_from,.exchange_select_to{
     margin: 30px 10px 20px 30px;
-    width: 100%;
+    width: 100%; 
+    text-align: center;
 }
+.h4from, .h4to, .ex_from, .ex_to{
+    text-align: center;
+}
+select{
+    align-items: center;
+}
+
 .exchange_select_line{
     border: 1px solid grey;
     border-radius: 3px;

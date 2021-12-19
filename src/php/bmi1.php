@@ -30,23 +30,12 @@
           </div>
         </div>
       </nav>
-
-      <!-- skrypt conenct to db -->
+      <!-- skrypt1: podłączenia do bazy danych -->
       <?php //skrypt1 
-        $con = mysqli_connect('localhost','root');
-        $db = mysqli_select_db($con,'[nazwa_bazy]');
-        //var_export($db);
-        $que = "SELECT informacja, wart_min, wart_max from [nazwa_bazy];";
-        $ans = mysqli_query($con,$que);
-        //var_dump($ans);
-        // while($row = mysqli_fetch_row($ans)){
-        // 	echo "<tr>";
-        // 	echo "<td>".$row['0']."</td>"."<td>".$row['1']."</td><td>".$row['2']."</td></tr>";
-        // }
-		
+        $con = mysqli_connect('localhost','root','Fad3f535');
+        $db = mysqli_select_db($con,'wsbpiuzal');
 ?>
       <!-- Formularz BMI -->
-
 <div class="wrapper">
   <form action="" method="POST">
   <div class="header">
@@ -58,19 +47,18 @@
       <input type="number" name="waga" class="Weight-form-control" id="inputWeight" placeholder="podaj swoją wagę">
       </div>
     </div>
-
     <div class="HeightFrom">
       <label for="inputHeight" class="Height-form-label">Wzrost</label>
       <div class="HeightFromControl">
       <input type="number" name="wzrost" class="Height-form-control" id="inputheight" placeholder="podaj swoją wzrost">
       </div>
     </div>
-
     <div class="ButtonControl">
     <input class="button" type="submit" value="oblicz">
     </div>
-
     <div class="BMI">
+    <!-- skrypt2: przeliczanie wartości wagi oraz wzrostu potrzebnych do podania wskaźnika BMI. 
+    Jeśli wartości są podane to wynik jest zapisywany w bazie danych na serwerze z datą dodania -->
     <?php
     if(isset($_POST['waga'])&&(isset($_POST['wzrost']))){
 		$w = $_POST['waga'];
@@ -81,7 +69,7 @@
 		echo " Twój wzrost: ".$wz;
 		echo "<br> BMI wynosi: ".$bmi;
 			if ($bmi >= 31){
-				$que = "INSERT INTO wynik (bmi_id,data_pomiaru,wynik) Values('3','$data','27');" ;
+				$que = "INSERT INTO bmi (bmi_id,data_pomiaru,wynik) Values('3','$data','27');" ;
 			}
 		}
 		mysqli_close($con);
@@ -89,26 +77,6 @@
     </div>
   </form>
 </div>
-
-<!-- <form action="" method="POST">
-  <div class="row mb-3 ">
-    <label for="weight" class="col-sm-2 col-form-label">Waga</label>
-    <div class="col-sm-10">
-      <input type="number" name="waga" class="form-control" id="inputEmail3" placeholder="Podaj swoją wagę">
-    </div>
-  </div>
-  
-  <div class="row mb-3">
-    <label for="height" class="col-sm-2 col-form-label">Wzrost</label>
-    <div class="col-sm-10">
-      <input type="number" name="wzrost" class="form-control" id="inputPassword3" placeholder="Podaj swój wzrost">
-    </div>
-  </div>
-
-  <div class="row mb-3">
-      <input class="button" type="submit" value="oblicz">
-  </div> -->
-<!-- </form> -->
       <footer>
           <div class="ending">
               <p>Krzysztof Drzewiecki 114939 grIII_inf_nw_5 </p>
